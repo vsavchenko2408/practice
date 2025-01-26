@@ -7,6 +7,18 @@
 
 using namespace std;
 
+int minvalue(int *arr)
+{
+    int min = arr[0];
+    for (int i = 1; i < 10; ++i)
+    {
+        if (min > arr[i])
+        {
+            min = arr[i];
+        }
+    }
+    return min;
+}
 int main()
 {
     int value = 0;
@@ -36,6 +48,8 @@ int main()
         cout << arr[j] << " ";
     }
     cout << endl;
+
+    cout << "Minimal value: " << minvalue(arr) << endl;
 
     return 0;
 }
