@@ -36,7 +36,7 @@ int main()
         {
             std::cout << "Осінь" << std::endl;
         }
-        else if (month < 1 && month > 12 && !month)
+        else if ((month < 1) || (month > 12))
         {
             std::cerr << "Неправильний ввід!" << std::endl;
         }
