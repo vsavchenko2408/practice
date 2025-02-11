@@ -60,4 +60,5 @@ int main()
     {
         i.show_info();
     }
+	std::cout << "End program" << std::endl;
 }
