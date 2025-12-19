@@ -8,7 +8,11 @@ int main()
 {
     while(true)
     {
+#if defined(_WIN32)
+        system("cls");
+#else
     system("clear");
+#endif
     auto now = std::chrono::system_clock::now();
     std::time_t t = std::chrono::system_clock::to_time_t(now);
     std::tm tm;
