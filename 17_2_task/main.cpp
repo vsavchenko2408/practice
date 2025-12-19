@@ -11,12 +11,12 @@ void fill(int* arr, const int N)
 
 int find_min(int* arr, const int N)
 {
-    int min = arr[0];
-    for(int i = 0; i < N; i++)
+    int min = 0;
+    for(int i = 1; i < N; ++i)
     {
-        if(min > arr[i])
+        if(arr[i] < arr[min])
         {
-            min = arr[i];
+            min = i;
         }
     }
     return min;
@@ -24,13 +24,13 @@ int find_min(int* arr, const int N)
 
 int find_max(int* arr, const int N)
 {
-    int max = arr[0];
+    int max = 0;
 
-    for(int i = 0; i < N; i++)
+    for(int i = 1; i < N; ++i)
     {
-        if(max < arr[i])
+        if(arr[i] > arr[max])
         {
-            max = arr[i];
+            max = i;
         }
     }
     return max;
