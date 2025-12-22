@@ -15,27 +15,22 @@ int main()
     int count = 0;
     for(int i = 0; i < N; i++)
     {
-        if(arr[i] %2 != 0)
+        if (arr[i] % 2 == 0)
         {
-            arr[i] = 0;
-        }
-        else
-        {
-            count++;
+            ++count;
         }
     }
     show(arr, N);
     int* new_arr = new int[count];
-    for(int j = 0; j < N; j++)
+    int idx = 0;
+    for (int j = 0; j < N; ++j)
     {
-        int c = 0;
-        if(arr[j] != 0)
+        if (arr[j] % 2 == 0)
         {
-            c++;
-        new_arr[c] = arr[j];
+            new_arr[idx++] = arr[j];
         }
     }
-show(new_arr, count);
+    show(new_arr, count);
     delete[] arr;
     delete[] new_arr;
 }
